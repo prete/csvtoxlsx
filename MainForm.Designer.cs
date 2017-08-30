@@ -39,6 +39,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelFileDate = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxRemoveTextQualifier = new System.Windows.Forms.CheckBox();
+            this.textBoxTextQualifier = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxDelimiter = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.checkBoxFirstRowHasColumnNames = new System.Windows.Forms.CheckBox();
+            this.numericUpDownMaxRecordsPerFile = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxCustomOutputName = new System.Windows.Forms.TextBox();
@@ -47,17 +54,10 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.numericUpDownMaxRecordsPerFile = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxFirstRowHasColumnNames = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBoxDelimiter = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxTextQualifier = new System.Windows.Forms.TextBox();
-            this.checkBoxRemoveTextQualifier = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxRecordsPerFile)).BeginInit();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog
@@ -168,6 +168,88 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opciones de conversión";
             // 
+            // checkBoxRemoveTextQualifier
+            // 
+            this.checkBoxRemoveTextQualifier.AutoSize = true;
+            this.checkBoxRemoveTextQualifier.Location = new System.Drawing.Point(202, 122);
+            this.checkBoxRemoveTextQualifier.Name = "checkBoxRemoveTextQualifier";
+            this.checkBoxRemoveTextQualifier.Size = new System.Drawing.Size(120, 17);
+            this.checkBoxRemoveTextQualifier.TabIndex = 10;
+            this.checkBoxRemoveTextQualifier.Text = "Remover calificador";
+            this.checkBoxRemoveTextQualifier.UseVisualStyleBackColor = true;
+            // 
+            // textBoxTextQualifier
+            // 
+            this.textBoxTextQualifier.Location = new System.Drawing.Point(202, 96);
+            this.textBoxTextQualifier.MaxLength = 1;
+            this.textBoxTextQualifier.Name = "textBoxTextQualifier";
+            this.textBoxTextQualifier.Size = new System.Drawing.Size(128, 20);
+            this.textBoxTextQualifier.TabIndex = 9;
+            this.textBoxTextQualifier.Text = "\"";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Calificador de texto:";
+            // 
+            // textBoxDelimiter
+            // 
+            this.textBoxDelimiter.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDelimiter.Location = new System.Drawing.Point(202, 66);
+            this.textBoxDelimiter.MaxLength = 1;
+            this.textBoxDelimiter.Name = "textBoxDelimiter";
+            this.textBoxDelimiter.Size = new System.Drawing.Size(128, 20);
+            this.textBoxDelimiter.TabIndex = 7;
+            this.textBoxDelimiter.Text = ",";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 66);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Separador:";
+            // 
+            // checkBoxFirstRowHasColumnNames
+            // 
+            this.checkBoxFirstRowHasColumnNames.AutoSize = true;
+            this.checkBoxFirstRowHasColumnNames.Checked = true;
+            this.checkBoxFirstRowHasColumnNames.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxFirstRowHasColumnNames.Location = new System.Drawing.Point(6, 155);
+            this.checkBoxFirstRowHasColumnNames.Name = "checkBoxFirstRowHasColumnNames";
+            this.checkBoxFirstRowHasColumnNames.Size = new System.Drawing.Size(306, 17);
+            this.checkBoxFirstRowHasColumnNames.TabIndex = 5;
+            this.checkBoxFirstRowHasColumnNames.Text = "La primer fila del archivo contiene los nombres de columnas";
+            this.checkBoxFirstRowHasColumnNames.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownMaxRecordsPerFile
+            // 
+            this.numericUpDownMaxRecordsPerFile.Location = new System.Drawing.Point(202, 38);
+            this.numericUpDownMaxRecordsPerFile.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.numericUpDownMaxRecordsPerFile.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownMaxRecordsPerFile.Name = "numericUpDownMaxRecordsPerFile";
+            this.numericUpDownMaxRecordsPerFile.Size = new System.Drawing.Size(128, 20);
+            this.numericUpDownMaxRecordsPerFile.TabIndex = 4;
+            this.numericUpDownMaxRecordsPerFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownMaxRecordsPerFile.Value = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -237,89 +319,6 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
-            // numericUpDownMaxRecordsPerFile
-            // 
-            this.numericUpDownMaxRecordsPerFile.Location = new System.Drawing.Point(202, 38);
-            this.numericUpDownMaxRecordsPerFile.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.numericUpDownMaxRecordsPerFile.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownMaxRecordsPerFile.Name = "numericUpDownMaxRecordsPerFile";
-            this.numericUpDownMaxRecordsPerFile.Size = new System.Drawing.Size(128, 20);
-            this.numericUpDownMaxRecordsPerFile.TabIndex = 4;
-            this.numericUpDownMaxRecordsPerFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDownMaxRecordsPerFile.Value = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            // 
-            // checkBoxFirstRowHasColumnNames
-            // 
-            this.checkBoxFirstRowHasColumnNames.AutoSize = true;
-            this.checkBoxFirstRowHasColumnNames.Checked = true;
-            this.checkBoxFirstRowHasColumnNames.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxFirstRowHasColumnNames.Enabled = false;
-            this.checkBoxFirstRowHasColumnNames.Location = new System.Drawing.Point(6, 155);
-            this.checkBoxFirstRowHasColumnNames.Name = "checkBoxFirstRowHasColumnNames";
-            this.checkBoxFirstRowHasColumnNames.Size = new System.Drawing.Size(306, 17);
-            this.checkBoxFirstRowHasColumnNames.TabIndex = 5;
-            this.checkBoxFirstRowHasColumnNames.Text = "La primer fila del archivo contiene los nombres de columnas";
-            this.checkBoxFirstRowHasColumnNames.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 66);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Separador:";
-            // 
-            // textBoxDelimiter
-            // 
-            this.textBoxDelimiter.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDelimiter.Location = new System.Drawing.Point(202, 66);
-            this.textBoxDelimiter.MaxLength = 1;
-            this.textBoxDelimiter.Name = "textBoxDelimiter";
-            this.textBoxDelimiter.Size = new System.Drawing.Size(128, 20);
-            this.textBoxDelimiter.TabIndex = 7;
-            this.textBoxDelimiter.Text = ",";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Calificador de texto:";
-            // 
-            // textBoxTextQualifier
-            // 
-            this.textBoxTextQualifier.Location = new System.Drawing.Point(202, 96);
-            this.textBoxTextQualifier.MaxLength = 1;
-            this.textBoxTextQualifier.Name = "textBoxTextQualifier";
-            this.textBoxTextQualifier.Size = new System.Drawing.Size(128, 20);
-            this.textBoxTextQualifier.TabIndex = 9;
-            this.textBoxTextQualifier.Text = "\"";
-            // 
-            // checkBoxRemoveTextQualifier
-            // 
-            this.checkBoxRemoveTextQualifier.AutoSize = true;
-            this.checkBoxRemoveTextQualifier.Location = new System.Drawing.Point(202, 122);
-            this.checkBoxRemoveTextQualifier.Name = "checkBoxRemoveTextQualifier";
-            this.checkBoxRemoveTextQualifier.Size = new System.Drawing.Size(120, 17);
-            this.checkBoxRemoveTextQualifier.TabIndex = 10;
-            this.checkBoxRemoveTextQualifier.Text = "Remover calificador";
-            this.checkBoxRemoveTextQualifier.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,9 +336,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxRecordsPerFile)).EndInit();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxRecordsPerFile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

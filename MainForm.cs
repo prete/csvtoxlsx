@@ -277,10 +277,17 @@ namespace CSVaXLS
             {
                 using (var dataTable = new DataTable())
                 {
-                    int columnCount = 0;
+                    int columnCount = 0;                    
                     foreach (var column in columns)
                     {
-                        dataTable.Columns.Add(new DataColumn(column, typeof(string)));
+                        if (checkBoxFirstRowHasColumnNames.Checked)
+                        {
+                            dataTable.Columns.Add(new DataColumn(column, typeof(string)));
+                        }
+                        else
+                        {
+                            dataTable.Columns.Add(new DataColumn(columnCount.ToString(), typeof(string)));
+                        }
                         columnCount++;
                     }
 
@@ -293,11 +300,24 @@ namespace CSVaXLS
                         {
                             if (checkBoxRemoveTextQualifier.Checked && !string.IsNullOrEmpty(textQualifier))
                             {
-                                row[columns.ElementAt(i)] = data[i].Replace(textQualifier, string.Empty);
+                                if (checkBoxFirstRowHasColumnNames.Checked)
+                                {
+                                    row[columns.ElementAt(i)] = data[i].Replace(textQualifier, string.Empty);
+                                }
+                                else { 
+                                    row[i] = data[i].Replace(textQualifier, string.Empty);
+                                }
                             }
                             else
                             {
-                                row[columns.ElementAt(i)] = data[i];
+                                if (checkBoxFirstRowHasColumnNames.Checked)
+                                {
+                                    row[columns.ElementAt(i)] = data[i];
+                                }
+                                else
+                                {
+                                    row[i] = data[i];
+                                }                                
                             }
                         }
                         dataTable.Rows.Add(row);
